@@ -1,4 +1,5 @@
 import techStaff.DatabaseAdmin;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -6,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DatabaseAdminTest {
 
-    DatabaseAdmin databaseAdmin;
+    private DatabaseAdmin databaseAdmin;
 
     @Before
     public void before(){

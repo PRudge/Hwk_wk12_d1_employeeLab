@@ -18,7 +18,7 @@ public abstract class Employee {
     }
 
     public void setName(String name){
-        if (name != ""){
+        if (!(name.isEmpty())){
             this.name = name;
         }
     }
@@ -40,9 +40,5 @@ public abstract class Employee {
     public Double payBonus() {
         return (this.salary * 1/100);
     }
-
-
-
-
 
 }

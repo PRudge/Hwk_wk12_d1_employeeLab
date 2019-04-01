@@ -1,4 +1,5 @@
 import techStaff.Developer;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -6,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DeveloperTest {
 
-    Developer developer;
+    private Developer developer;
 
     @Before
     public void before(){
@@ -38,7 +39,6 @@ public class DeveloperTest {
     public void canNotSetNameToNull(){
         developer.setName("");
         assertEquals("Pauline", developer.getName());
-
     }
 
     @Test

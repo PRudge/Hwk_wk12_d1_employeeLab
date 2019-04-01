@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DirectorTest {
 
-    Director director;
+    private Director director;
 
     @Before
     public void before() {
@@ -71,4 +71,5 @@ public class DirectorTest {
         assertEquals(500, director.payBonus(),2); //director overode payBonus
     }
 }
+
 

@@ -6,9 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class ManagerTest {
 
-    Manager manager;
+    private Manager manager;
+
 
     @Before
+
     public void before(){
         manager = new Manager("Pauline","QQ123456C",25000.00, "HR");
     }
