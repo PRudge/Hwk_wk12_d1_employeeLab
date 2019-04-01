@@ -40,21 +40,22 @@ public class ManagerTest {
     }
 
     @Test
-    public void canSetNINumber(){
-        manager.setNINumber("SC111111S");
-        assertEquals("SC111111S",manager.getNINumber());
-    }
+    public void canNotSetNameToNull(){
+        manager.setName("");
+        assertEquals("Pauline", manager.getName());
 
-    @Test
-    public void canSetSalary(){
-        manager.setSalary(50000.00);
-        assertEquals(50000.00, manager.getSalary(),2);
     }
 
     @Test
     public void canRaiseSalary(){
         manager.raiseSalary(10000.00);
         assertEquals(35000.00, manager.getSalary(),2);
+    }
+
+    @Test
+    public void canNotDropSalary(){
+        manager.raiseSalary(-10000.00);
+        assertEquals(25000.00, manager.getSalary(),2);
     }
 
     @Test

@@ -18,29 +18,23 @@ public abstract class Employee {
     }
 
     public void setName(String name){
-        this.name = name;
+        if (name != ""){
+            this.name = name;
+        }
     }
 
     public String getNINumber(){
         return this.NINumber;
     }
 
-    public void setNINumber(String NINumber){
-        this.NINumber = NINumber;
-
-    }
-
     public Double getSalary(){
         return this.salary;
     }
 
-    public void setSalary(Double salary){
-        this.salary = salary;
-    }
-
     public void raiseSalary(Double salaryIncrement){
-
-       this.salary += salaryIncrement;
+        if (salaryIncrement > 0) {
+            this.salary += salaryIncrement;
+        }
     }
 
     public Double payBonus() {

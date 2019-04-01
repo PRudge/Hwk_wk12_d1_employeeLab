@@ -35,21 +35,22 @@ public class DeveloperTest {
     }
 
     @Test
-    public void canSetNINumber(){
-        developer.setNINumber("SC111111S");
-        assertEquals("SC111111S", developer.getNINumber());
-    }
+    public void canNotSetNameToNull(){
+        developer.setName("");
+        assertEquals("Pauline", developer.getName());
 
-    @Test
-    public void canSetSalary(){
-        developer.setSalary(50000.00);
-        assertEquals(50000.00, developer.getSalary(),2);
     }
 
     @Test
     public void canRaiseSalary(){
         developer.raiseSalary(10000.00);
         assertEquals(35000.00, developer.getSalary(),2);
+    }
+
+    @Test
+    public void canNotDropSalary(){
+        developer.raiseSalary(-10000.00);
+        assertEquals(25000.00, developer.getSalary(),2);
     }
 
     @Test

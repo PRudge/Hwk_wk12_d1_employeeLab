@@ -1,4 +1,4 @@
-package Management;
+import Management.Director;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,16 +40,12 @@ public class DirectorTest {
         assertEquals("Brogan", director.getName());
     }
 
-    @Test
-    public void canSetNINumber(){
-        director.setNINumber("SC111111S");
-        assertEquals("SC111111S",director.getNINumber());
-    }
 
     @Test
-    public void canSetSalary(){
-        director.setSalary(50000.00);
-        assertEquals(50000.00, director.getSalary(),2);
+    public void canNotSetNameToNull(){
+        director.setName("");
+        assertEquals("Pauline", director.getName());
+
     }
 
     @Test
@@ -65,8 +61,14 @@ public class DirectorTest {
     }
 
     @Test
+    public void canNotDropSalary(){
+        director.raiseSalary(-10000.00);
+        assertEquals(25000.00, director.getSalary(),2);
+    }
+
+    @Test
     public void canPayBonus(){
-        assertEquals(250,director.payBonus(),2);
+        assertEquals(500, director.payBonus(),2); //director overode payBonus
     }
 }
 

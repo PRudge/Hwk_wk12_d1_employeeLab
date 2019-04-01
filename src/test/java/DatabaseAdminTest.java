@@ -36,21 +36,23 @@ public class DatabaseAdminTest {
     }
 
     @Test
-    public void canSetNINumber(){
-        databaseAdmin.setNINumber("SC111111S");
-        assertEquals("SC111111S",databaseAdmin.getNINumber());
+    public void canNotSetNameToNull(){
+        databaseAdmin.setName("");
+        assertEquals("Pauline", databaseAdmin.getName());
+
     }
 
-    @Test
-    public void canSetSalary(){
-        databaseAdmin.setSalary(50000.00);
-        assertEquals(50000.00, databaseAdmin.getSalary(),2);
-    }
 
     @Test
     public void canRaiseSalary(){
         databaseAdmin.raiseSalary(10000.00);
         assertEquals(35000.00, databaseAdmin.getSalary(),2);
+    }
+
+    @Test
+    public void canNotDropSalary(){
+        databaseAdmin.raiseSalary(-10000.00);
+        assertEquals(25000.00, databaseAdmin.getSalary(),2);
     }
 
     @Test
